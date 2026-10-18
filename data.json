@@ -8,7 +8,7 @@
       "amount": "₩279,567,000",
       "note": null,
       "startYear": 2025,
-      "endYear": null,
+      "endYear": 2028,
       "active": true
     },
     {
@@ -80,11 +80,18 @@
   ],
   "publications": [
     {
+      "journal": "Neuroimage",
+      "year": 2026,
+      "title": "Resting-state EEG dissociates heartbeat counting from heart-rate discrimination: Cortical signal entropy tracks counting accuracy, default-mode connectivity tracks exteroceptive discrimination",
+      "authors": "June Christoph Kang, Hee-Jin Park, Hokyoung Yoon",
+      "url": "https://doi.org/10.1016/j.neuroimage.2026.122240"
+    },
+    {
       "journal": "Brain and Behavior",
       "year": 2026,
       "title": "Association Between White Matter Tract Microstructure and Cognitive, Affective, and Somatic Empathy in Children",
       "authors": "June Christoph Kang",
-      "url": "https://www.ipsych.me/?p=4584"
+      "url": "https://doi.org/10.1002/brb3.71751"
     },
     {
       "journal": "Acta Neuropsychiatrica",
