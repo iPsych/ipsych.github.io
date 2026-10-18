@@ -113,11 +113,37 @@ function renderPublications(publications) {
   observeReveal(list);
 }
 
+function renderConferences(conferences) {
+  const list = document.getElementById("conference-list");
+  if (!list) return;
+
+  list.innerHTML = conferences
+    .map((c) => {
+      const venue = c.venue.replace(/&/g, "&amp;");
+      const authors = c.authors.replace(/&/g, "&amp;");
+      const locationPart = c.location ? `, ${c.location}` : "";
+      const publisherPart = c.publisher ? ` · ${c.publisher}` : "";
+      const meta = `${venue}${locationPart}${publisherPart}`;
+      const tag = c.url ? "a" : "div";
+      const href = c.url ? ` href="${c.url}" target="_blank" rel="noreferrer"` : "";
+      return `<${tag} class="publication reveal"${href}>
+  <div class="pub-meta"><span>${meta}</span><time>${c.year}</time></div>
+  <h3>${c.title}</h3>
+  <p>${authors}</p>
+  ${c.url ? '<span class="pub-arrow" aria-hidden="true">↗</span>' : ""}
+</${tag}>`;
+    })
+    .join("\n");
+
+  observeReveal(list);
+}
+
 // Fetch data.json and populate sections
 fetch("data.json")
   .then((r) => r.json())
   .then((data) => {
     renderProjects(data.projects);
     renderPublications(data.publications);
+    if (data.conferences) renderConferences(data.conferences);
   })
   .catch((err) => console.error("Failed to load data.json:", err));
