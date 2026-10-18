@@ -1,0 +1,125 @@
+{
+  "projects": [
+    {
+      "title": "Development of an Empathic Artificial Intelligence Model Using an Artificial Mirror Neuron Network Based on Reservoir Computing",
+      "funder": "National Research Foundation of Korea",
+      "grantNo": "RS-2025-23524143",
+      "role": "Principal Investigator",
+      "amount": "₩279,567,000",
+      "note": null,
+      "startYear": 2025,
+      "endYear": null,
+      "active": true
+    },
+    {
+      "title": "Development of Socially Intelligent Edge Language Models and Neural Data Refinement via GPU Parallel Computing",
+      "funder": "National IT Industry Promotion Agency",
+      "grantNo": "PJT-25-122281",
+      "role": "Principal Investigator",
+      "amount": "₩135,011,520",
+      "note": "in-kind computational support",
+      "startYear": 2026,
+      "endYear": 2026,
+      "active": false
+    },
+    {
+      "title": "Decision to Care: Neuroplasticity of the Brain and Autonomic Nervous System Associated with Care Experience",
+      "funder": "National Research Foundation of Korea",
+      "grantNo": "RS-2023-00272647",
+      "role": "Principal Investigator",
+      "amount": "₩235,216,000",
+      "note": null,
+      "startYear": 2023,
+      "endYear": 2026,
+      "active": false
+    },
+    {
+      "title": "Translational Approach to the Prognosis of Tic Disorder Using Neuroimaging and Electroencephalography",
+      "funder": "Korea Health Industry Development Institute",
+      "grantNo": "HI21C0012020021",
+      "role": "Principal Investigator",
+      "amount": "₩275,000,000",
+      "note": null,
+      "startYear": 2021,
+      "endYear": 2023,
+      "active": false
+    },
+    {
+      "title": "Multi-level Approach to the Automaticity of Empathy: Individual Variance and Expandability of Empathic Ability",
+      "funder": "National Research Foundation of Korea",
+      "grantNo": "NRF-2018R1D1A1B07048820",
+      "role": "Principal Investigator",
+      "amount": "₩250,000,000",
+      "note": null,
+      "startYear": 2018,
+      "endYear": 2023,
+      "active": false
+    },
+    {
+      "title": "Measuring Empathy Bias Toward Outgroup Members and Reducing Bias Through Non-invasive Brain Stimulation",
+      "funder": "National Research Foundation of Korea",
+      "grantNo": "NRF-2018R1E1A2A02086661",
+      "role": "Principal Investigator",
+      "amount": "₩80,000,000",
+      "note": null,
+      "startYear": 2018,
+      "endYear": 2019,
+      "active": false
+    },
+    {
+      "title": "Decoding Individual Patterns of Emotional Empathy and Elicitation Using High-density EEG and Non-invasive Brain Stimulation",
+      "funder": "National Research Foundation of Korea",
+      "grantNo": "NRF-2017R1E1A2A01079266",
+      "role": "Principal Investigator",
+      "amount": "₩85,000,000",
+      "note": null,
+      "startYear": 2017,
+      "endYear": 2018,
+      "active": false
+    }
+  ],
+  "publications": [
+    {
+      "journal": "Brain and Behavior",
+      "year": 2026,
+      "title": "Association Between White Matter Tract Microstructure and Cognitive, Affective, and Somatic Empathy in Children",
+      "authors": "June Christoph Kang",
+      "url": "https://www.ipsych.me/?p=4584"
+    },
+    {
+      "journal": "Acta Neuropsychiatrica",
+      "year": 2026,
+      "title": "Transcutaneous auricular vagus nerve stimulation increases empathic choice toward outgroup negative emotions",
+      "authors": "June Christoph Kang",
+      "url": "https://doi.org/10.1017/neu.2026.10091"
+    },
+    {
+      "journal": "AI & Society",
+      "year": 2026,
+      "title": "The Tachikoma Effect: Aggregation of Independent Agents Aligns LLM Collectives with Majority Human Moral Judgment",
+      "authors": "June Christoph Kang",
+      "url": "https://www.ipsych.me/?p=4564"
+    },
+    {
+      "journal": "IEEE Access",
+      "year": 2026,
+      "title": "Emotion Ontology from the Perspective of Developmental Robotics: A Review",
+      "authors": "June Christoph Kang",
+      "url": "https://ieeexplore.ieee.org/document/11499380"
+    },
+    {
+      "journal": "IEEE Access",
+      "year": 2026,
+      "title": "Just-in-Time Adaptive Interventions in Digital Mental Health Care: A Framework for Psychiatric Conditions",
+      "authors": "June Christoph Kang",
+      "url": "https://ieeexplore.ieee.org/document/11495042"
+    },
+    {
+      "journal": "Journal of Neurodevelopmental Disorders",
+      "year": 2024,
+      "title": "Diffusion indices alteration in major white matter tracts of children with tic disorder using TRACULA",
+      "authors": "Kang, Chi, Mok, Kim, Kim & Lee",
+      "url": "https://doi.org/10.1186/s11689-024-09558-5"
+    }
+  ]
+}
