@@ -25,22 +25,99 @@ navigation.querySelectorAll("a").forEach((link) => {
   });
 });
 
-if ("IntersectionObserver" in window) {
+// ----- Intersection observer for reveal animations -----
+function observeReveal(root) {
+  if (!("IntersectionObserver" in window)) {
+    root.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
   const observer = new IntersectionObserver(
-    (entries, currentObserver) => {
+    (entries, obs) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          currentObserver.unobserve(entry.target);
+          obs.unobserve(entry.target);
         }
       });
     },
     { threshold: 0.08, rootMargin: "0px 0px -45px" },
   );
-
-  revealItems.forEach((item) => observer.observe(item));
-} else {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
+  root.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 }
 
+observeReveal(document);
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// ----- Data-driven rendering -----
+function projectDateLabel(p) {
+  if (p.active) return `${p.startYear}—Present`;
+  if (p.endYear === null || p.endYear === p.startYear) return String(p.startYear);
+  return `${p.startYear}—${p.endYear}`;
+}
+
+function renderProjects(projects) {
+  const list = document.getElementById("project-list");
+  if (!list) return;
+
+  list.innerHTML = projects
+    .map((p) => {
+      const dateLabel = projectDateLabel(p);
+      const statusLabel = p.active ? "Active" : "Completed";
+      const currentClass = p.active ? " project-current" : "";
+      const funderLine = p.grantNo
+        ? `${p.funder} · ${p.grantNo}`
+        : p.funder;
+      const amountLine = p.note
+        ? `${p.amount} · ${p.note}`
+        : p.amount;
+
+      return `<article class="project${currentClass} reveal">
+  <div class="project-date"><time>${dateLabel}</time><span>${statusLabel}</span></div>
+  <div class="project-main">
+    <h3>${p.title}</h3>
+    <p>${funderLine}</p>
+  </div>
+  <div class="project-detail">
+    <strong>${p.role}</strong>
+    <span>${amountLine}</span>
+  </div>
+</article>`;
+    })
+    .join("\n");
+
+  // Update active-project count in the About stat strip
+  const countEl = document.getElementById("active-project-count");
+  if (countEl) countEl.textContent = String(projects.filter((p) => p.active).length);
+
+  observeReveal(list);
+}
+
+function renderPublications(publications) {
+  const list = document.getElementById("publication-list");
+  if (!list) return;
+
+  list.innerHTML = publications
+    .map((pub) => {
+      // Escape & for HTML display; the JSON stores the plain character
+      const journal = pub.journal.replace(/&/g, "&amp;");
+      const authors = pub.authors.replace(/&/g, "&amp;");
+      return `<a class="publication reveal" href="${pub.url}" target="_blank" rel="noreferrer">
+  <div class="pub-meta"><span>${journal}</span><time>${pub.year}</time></div>
+  <h3>${pub.title}</h3>
+  <p>${authors}</p>
+  <span class="pub-arrow" aria-hidden="true">↗</span>
+</a>`;
+    })
+    .join("\n");
+
+  observeReveal(list);
+}
+
+// Fetch data.json and populate sections
+fetch("data.json")
+  .then((r) => r.json())
+  .then((data) => {
+    renderProjects(data.projects);
+    renderPublications(data.publications);
+  })
+  .catch((err) => console.error("Failed to load data.json:", err));
