@@ -128,5 +128,34 @@
       "authors": "Kang, Chi, Mok, Kim, Kim & Lee",
       "url": "https://doi.org/10.1186/s11689-024-09558-5"
     }
+  ],
+  "conferences": [
+    {
+      "authors": "J. Park, C. Wallraven, and J. Kang",
+      "title": "Too Close for Comfort: Continuous Anxiety Decoding from Physiology and Embodied Signals in Social VR",
+      "venue": "IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2026)",
+      "location": "Bari, Italy",
+      "publisher": "IEEE",
+      "year": 2026,
+      "url": null
+    },
+    {
+      "authors": "H. S. Ryu, J. C. Kang, and C. Wallraven",
+      "title": "Test-Time User Alignment via Bayesian Population Guidance in Subjective Tasks",
+      "venue": "35th International Joint Conference on Artificial Intelligence (IJCAI-ECAI 2026)",
+      "location": "Bremen, Germany",
+      "publisher": null,
+      "year": 2026,
+      "url": null
+    },
+    {
+      "authors": "J. Kang and Y. E. Park",
+      "title": "A preliminary study on reading the mind in the eyes of the robot",
+      "venue": "30th IEEE International Conference on Robot & Human Interactive Communication (RO-MAN)",
+      "location": null,
+      "publisher": "IEEE",
+      "year": 2021,
+      "url": null
+    }
   ]
 }
